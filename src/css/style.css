@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.task-lists-container {
+  width: 100vw;
+  display: flex;
+  gap: 10px;
+}
+
+.task-list__wrapper {
+  width: calc((100% - 40px) / 3);
+  height: max-content;
+  border-radius: 5px;
+  background-color: lightgray;
+  padding: 7px;
+}
+
+.task-list__header {
+  font-weight: 700;
+  color: darkblue;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.task-add-link {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/*** new-card ***/
+
+.new-card-container {
+  margin: 10px 0;
+}
+
+.new-card-text {
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px gray;
+  resize: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.new-card-add {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  border-radius: 5px;
+  background-color: green;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.new-card-close {
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/*** task ***/
+
+.task-container {
+  position: relative;
+  background-color: white;
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  cursor: default;
+}
+
+.task-header {
+  min-height: 40px;
+  overflow-wrap: anywhere;
+  cursor: inherit;
+}
+
+.task-close {
+  display: none;
+  position: absolute;
+  font-weight: 900;
+  top: 5px;
+  right: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.task-container:hover > .task-close {
+  display: inline-block;
+}
+
+.dragged {
+  position: absolute;
+  z-index: 999;
+  cursor: grab;
+
+}
+
+.ghost-task {
+  background-color: grey;
+  opacity: 75%;
+}
+
+
